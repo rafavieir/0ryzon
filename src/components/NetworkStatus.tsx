@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 const NetworkStatus = () => {
   const [open, setOpen] = useState(false);
@@ -18,10 +18,10 @@ const NetworkStatus = () => {
   ];
 
   return (
-    <>
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogTrigger asChild>
-          <button className="fixed bottom-8 right-8 flex gap-2 items-center px-4 py-2 border border-border bg-background/80 backdrop-blur-sm cursor-pointer hover:bg-background transition-colors">
+    <div className="fixed bottom-8 right-8 z-50">
+      <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger asChild>
+          <button className="flex gap-2 items-center px-4 py-2 border border-border bg-background/80 backdrop-blur-sm cursor-pointer hover:bg-background transition-colors">
             <div className="flex gap-1.5">
               <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '0ms' }} />
               <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '150ms' }} />
@@ -29,13 +29,16 @@ const NetworkStatus = () => {
             </div>
             <span className="text-xs font-light text-green-500 tracking-wide">NODES ONLINE</span>
           </button>
-        </DialogTrigger>
-        <DialogContent className="max-w-md">
-          <DialogHeader>
-            <DialogTitle className="font-serif">Status da Infraestrutura</DialogTitle>
-          </DialogHeader>
-          
-          <div className="space-y-6 py-4">
+        </PopoverTrigger>
+        <PopoverContent 
+          className="w-80 p-6 animate-scale-in origin-bottom-right" 
+          align="end" 
+          side="top"
+          sideOffset={8}
+        >
+          <div className="space-y-6">
+            <h2 className="font-serif text-lg border-b border-border pb-2">Status da Infraestrutura</h2>
+            
             <div>
               <h3 className="text-sm font-light mb-3 tracking-wide">VALIDADORES & NODES</h3>
               <div className="space-y-2">
@@ -68,9 +71,9 @@ const NetworkStatus = () => {
               </div>
             </div>
           </div>
-        </DialogContent>
-      </Dialog>
-    </>
+        </PopoverContent>
+      </Popover>
+    </div>
   );
 };
 
