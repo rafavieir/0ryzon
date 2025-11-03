@@ -15,7 +15,7 @@ const Footer = () => {
               Conecte sua infraestrutura ao ecossistema Web3 ou integre sua aplicação à rede descentralizada
             </p>
             <Button 
-              variant="hero" 
+              variant="default" 
               size="lg"
               onClick={() => window.location.href = 'mailto:contato@3foro.io'}
             >

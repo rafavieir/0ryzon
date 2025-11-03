@@ -53,14 +53,13 @@ const Services = () => {
             return (
               <Card 
                 key={index} 
-                className="group hover:scale-[1.02] transition-all duration-500 hover:border-primary border-2 glass-effect relative overflow-hidden"
+                className="group hover:border-foreground/20 transition-all duration-300 border"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <CardHeader className="relative z-10">
-                  <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-500">
-                    <Icon className="w-7 h-7 text-primary group-hover:animate-pulse" />
+                <CardHeader>
+                  <div className="w-14 h-14 rounded-lg bg-muted flex items-center justify-center mb-4 group-hover:bg-muted/70 transition-colors duration-300">
+                    <Icon className="w-7 h-7 text-foreground" />
                   </div>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{service.title}</CardTitle>
+                  <CardTitle className="text-xl">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
                     {service.description}
                   </CardDescription>

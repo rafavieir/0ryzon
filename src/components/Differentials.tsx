@@ -25,11 +25,8 @@ const differentials = [
 
 const Differentials = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-24 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
@@ -44,15 +41,15 @@ const Differentials = () => {
             {differentials.map((item, index) => (
               <div 
                 key={index}
-                className="flex gap-4 p-7 rounded-2xl glass-effect hover:border-primary transition-all duration-500 hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] group hover:scale-[1.02]"
+                className="flex gap-4 p-7 rounded-lg border border-border bg-card hover:border-foreground/20 transition-all duration-300"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <CheckCircle2 className="w-7 h-7 text-accent group-hover:animate-pulse" />
+                  <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
+                    <CheckCircle2 className="w-7 h-7 text-foreground" />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors duration-300">{item.title}</h3>
+                  <h3 className="text-xl font-bold">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
               </div>
