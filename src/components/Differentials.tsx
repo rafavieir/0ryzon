@@ -25,36 +25,24 @@ const differentials = [
 
 const Differentials = () => {
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-              Nosso Diferencial
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              O que nos torna o parceiro ideal para sua infraestrutura Web3
-            </p>
-          </div>
+    <section className="py-32 border-t border-border">
+      <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl">
+        <div className="mb-20">
+          <h2 className="text-4xl sm:text-5xl font-light mb-4">
+            Diferenciais
+          </h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {differentials.map((item, index) => (
-              <div 
-                key={index}
-                className="flex gap-4 p-7 rounded-lg border border-border bg-card hover:border-foreground/20 transition-all duration-300"
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
-                    <CheckCircle2 className="w-7 h-7 text-foreground" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="space-y-12">
+          {differentials.map((item, index) => (
+            <div 
+              key={index}
+              className="border-t border-border pt-8"
+            >
+              <h3 className="text-2xl font-light mb-3">{item.title}</h3>
+              <p className="text-muted-foreground font-light leading-relaxed text-lg max-w-3xl">{item.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

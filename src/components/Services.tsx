@@ -36,35 +36,31 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-            O Que Fazemos
+    <section id="services" className="py-32 border-t border-border">
+      <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl">
+        <div className="mb-20">
+          <h2 className="text-4xl sm:text-5xl font-light mb-4">
+            Serviços
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground font-light max-w-2xl">
             Soluções completas de infraestrutura descentralizada com padrão enterprise
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px border-t border-l border-border">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card 
+              <div 
                 key={index} 
-                className="group hover:border-foreground/20 transition-all duration-300 border"
+                className="p-10 border-r border-b border-border bg-background hover:bg-muted/30 transition-colors"
               >
-                <CardHeader>
-                  <div className="w-14 h-14 rounded-lg bg-muted flex items-center justify-center mb-4 group-hover:bg-muted/70 transition-colors duration-300">
-                    <Icon className="w-7 h-7 text-foreground" />
-                  </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                  <CardDescription className="text-base leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+                <Icon className="w-8 h-8 text-foreground mb-6" />
+                <h3 className="text-xl font-light mb-3">{service.title}</h3>
+                <p className="text-muted-foreground font-light leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
             );
           })}
         </div>

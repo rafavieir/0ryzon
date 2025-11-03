@@ -13,35 +13,32 @@ const networks = [
 
 const Networks = () => {
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12 space-y-4">
-            <h2 className="text-3xl sm:text-4xl font-bold">
-              Redes & Ecossistemas
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Atuamos e colaboramos com projetos líderes em DePIN e Web3
-            </p>
-          </div>
+    <section className="py-32 border-t border-border">
+      <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl">
+        <div className="mb-20">
+          <h2 className="text-4xl sm:text-5xl font-light mb-4">
+            Redes & Ecossistemas
+          </h2>
+          <p className="text-lg text-muted-foreground font-light max-w-2xl">
+            Atuamos e colaboramos com projetos líderes em DePIN e Web3
+          </p>
+        </div>
 
-          <div className="flex flex-wrap justify-center gap-3">
-            {networks.map((network, index) => (
-              <Badge 
-                key={index} 
-                variant="outline"
-                className="px-6 py-3 text-base font-medium hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 cursor-default"
-              >
-                {network}
-              </Badge>
-            ))}
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px border-t border-l border-border">
+          {networks.map((network, index) => (
+            <div 
+              key={index}
+              className="p-8 border-r border-b border-border bg-background hover:bg-muted/30 transition-colors text-center"
+            >
+              <span className="text-foreground font-light">{network}</span>
+            </div>
+          ))}
+        </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-muted-foreground italic">
-              + Diversas outras redes PoS e DePIN em expansão
-            </p>
-          </div>
+        <div className="mt-16 text-center">
+          <p className="text-muted-foreground font-light italic">
+            + Diversas outras redes PoS e DePIN em expansão
+          </p>
         </div>
       </div>
     </section>
