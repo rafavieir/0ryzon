@@ -25,11 +25,43 @@ const Hero = () => {
 
           {/* Main Content */}
           <div className="space-y-12 max-w-3xl">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light leading-[1.1] text-foreground">
-              Infraestrutura<br />
-              Descentralizada<br />
-              Enterprise
-            </h1>
+            <div className="relative">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light leading-[1.1] text-foreground relative z-10">
+                Infraestrutura<br />
+                Descentralizada<br />
+                Enterprise
+              </h1>
+              
+              {/* Crypto-style animated grid */}
+              <div className="absolute -right-20 top-0 w-64 h-64 opacity-30 pointer-events-none hidden lg:block">
+                <div className="relative w-full h-full">
+                  {[...Array(6)].map((_, i) => (
+                    <div
+                      key={`h-${i}`}
+                      className="absolute left-0 right-0 h-px bg-primary"
+                      style={{
+                        top: `${i * 20}%`,
+                        animation: `pulse 3s ease-in-out infinite ${i * 0.2}s`
+                      }}
+                    />
+                  ))}
+                  {[...Array(6)].map((_, i) => (
+                    <div
+                      key={`v-${i}`}
+                      className="absolute top-0 bottom-0 w-px bg-primary"
+                      style={{
+                        left: `${i * 20}%`,
+                        animation: `pulse 3s ease-in-out infinite ${i * 0.3}s`
+                      }}
+                    />
+                  ))}
+                  {/* Animated nodes */}
+                  <div className="absolute top-[20%] left-[40%] w-2 h-2 rounded-full bg-primary animate-pulse" />
+                  <div className="absolute top-[60%] left-[60%] w-2 h-2 rounded-full bg-primary animate-pulse" style={{ animationDelay: '0.5s' }} />
+                  <div className="absolute top-[40%] left-[80%] w-2 h-2 rounded-full bg-primary animate-pulse" style={{ animationDelay: '1s' }} />
+                </div>
+              </div>
+            </div>
 
             <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-2xl">
               Operação profissional de nodes, validadores e infraestrutura descentralizada com alta disponibilidade
