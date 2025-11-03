@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Network, Globe, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-network.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSelector from "./LanguageSelector";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative min-h-screen flex items-center bg-background border-b border-border overflow-hidden">
       {/* Subtle grid pattern */}
@@ -13,6 +17,11 @@ const Hero = () => {
              backgroundSize: '80px 80px'
            }} 
       />
+
+      {/* Language Selector */}
+      <div className="absolute top-8 right-8 z-20">
+        <LanguageSelector />
+      </div>
       
       <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl relative z-10">
         <div className="space-y-16">
@@ -27,9 +36,7 @@ const Hero = () => {
           <div className="space-y-12 max-w-3xl">
             <div className="relative">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light leading-[1.1] text-foreground relative z-10">
-                Infraestrutura<br />
-                Descentralizada<br />
-                Enterprise
+                {t('hero.title')}
               </h1>
               
               {/* Crypto-style animated grid */}
@@ -64,27 +71,8 @@ const Hero = () => {
             </div>
 
             <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-2xl">
-              Operação profissional de nodes, validadores e infraestrutura descentralizada com alta disponibilidade
+              {t('hero.subtitle')}
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 pt-4">
-              <Button 
-                variant="default" 
-                size="lg"
-                className="font-light tracking-wide"
-                onClick={() => window.location.href = 'mailto:contato@³Øryzon.io'}
-              >
-                Falar com Especialista
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="font-light tracking-wide"
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Nossos Serviços
-              </Button>
-            </div>
           </div>
         </div>
       </div>

@@ -1,49 +1,37 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Server, Activity, FileCheck, Users, TestTube, Blocks } from "lucide-react";
-
-const services = [
-  {
-    icon: Server,
-    title: "Operação de Nodes DePIN",
-    description: "Operação e monitoramento 24/7 de nodes DePIN e validadores em múltiplas redes blockchain."
-  },
-  {
-    icon: Blocks,
-    title: "Infraestrutura Descentralizada",
-    description: "Provisionamento completo de storage, computação e banda em infraestrutura distribuída."
-  },
-  {
-    icon: Activity,
-    title: "Monitoramento & SLA",
-    description: "Painéis públicos de uptime, métricas transparentes e auditoria contínua de performance."
-  },
-  {
-    icon: FileCheck,
-    title: "Consultoria Web3",
-    description: "Apoio técnico para empresas Web2 e Web3 integrarem aplicações à infraestrutura descentralizada."
-  },
-  {
-    icon: TestTube,
-    title: "Testnets & Incentivos",
-    description: "Participação ativa em programas de testnet e redes incentivadas, apoiando novos ecossistemas."
-  },
-  {
-    icon: Users,
-    title: "Integração Global",
-    description: "Conexão entre datacenters distribuídos e o ecossistema global de computação descentralizada."
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+  
+  const services = [
+    {
+      icon: Server,
+      title: t('services.items.0.title'),
+      description: t('services.items.0.description')
+    },
+    {
+      icon: Blocks,
+      title: t('services.items.1.title'),
+      description: t('services.items.1.description')
+    },
+    {
+      icon: Activity,
+      title: t('services.items.2.title'),
+      description: t('services.items.2.description')
+    }
+  ];
+
   return (
     <section id="services" className="py-32 border-t border-border">
       <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl">
         <div className="mb-20">
           <h2 className="text-4xl sm:text-5xl font-light mb-4">
-            Serviços
+            {t('services.title')}
           </h2>
           <p className="text-lg text-muted-foreground font-light max-w-2xl">
-            Soluções completas de infraestrutura descentralizada com padrão enterprise
+            {t('services.subtitle')}
           </p>
         </div>
 

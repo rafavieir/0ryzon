@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const networks = [
   "Akash Network",
@@ -12,15 +12,17 @@ const networks = [
 ];
 
 const Networks = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-32 border-t border-border">
       <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl">
         <div className="mb-20">
           <h2 className="text-4xl sm:text-5xl font-light mb-4">
-            Redes & Ecossistemas
+            {t('networks.title')}
           </h2>
           <p className="text-lg text-muted-foreground font-light max-w-2xl">
-            Atuamos e colaboramos com projetos líderes em DePIN e Web3
+            {t('networks.subtitle')}
           </p>
         </div>
 
@@ -37,7 +39,7 @@ const Networks = () => {
 
         <div className="mt-16 text-center">
           <p className="text-muted-foreground font-light italic">
-            + Diversas outras redes PoS e DePIN em expansão
+            {t('networks.more')}
           </p>
         </div>
       </div>

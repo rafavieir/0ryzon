@@ -1,35 +1,37 @@
-import { CheckCircle2 } from "lucide-react";
-
-const differentials = [
-  {
-    title: "Infraestrutura 100% Monitorada",
-    description: "Painéis públicos de uptime e logs auditáveis em tempo real."
-  },
-  {
-    title: "Operação Multi-Rede",
-    description: "Experiência comprovada em performance e segurança em múltiplas blockchains."
-  },
-  {
-    title: "Expertise Técnico Real",
-    description: "Conhecimento profundo em cloud, containers, networking e arquitetura corporativa."
-  },
-  {
-    title: "Redundância & Resiliência",
-    description: "Arquitetura distribuída com múltiplos pontos de presença garantindo alta disponibilidade."
-  },
-  {
-    title: "Educação & Expansão",
-    description: "Compromisso com o crescimento e educação do ecossistema Web3 global."
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Differentials = () => {
+  const { t } = useLanguage();
+  
+  const differentials = [
+    {
+      title: t('differentials.items.0.title'),
+      description: t('differentials.items.0.description')
+    },
+    {
+      title: t('differentials.items.1.title'),
+      description: t('differentials.items.1.description')
+    },
+    {
+      title: t('differentials.items.2.title'),
+      description: t('differentials.items.2.description')
+    },
+    {
+      title: t('differentials.items.3.title'),
+      description: t('differentials.items.3.description')
+    },
+    {
+      title: t('differentials.items.4.title'),
+      description: t('differentials.items.4.description')
+    }
+  ];
+
   return (
     <section className="py-32 border-t border-border">
       <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl">
         <div className="mb-20">
           <h2 className="text-4xl sm:text-5xl font-light mb-4">
-            Diferenciais
+            {t('differentials.title')}
           </h2>
         </div>
 
