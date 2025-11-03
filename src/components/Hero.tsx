@@ -19,7 +19,7 @@ const Hero = () => {
           {/* Logo */}
           <div className="inline-block">
             <span className="text-2xl tracking-wider text-foreground font-light">
-              3FORO
+              0ryzon
             </span>
           </div>
 
@@ -72,7 +72,7 @@ const Hero = () => {
                 variant="default" 
                 size="lg"
                 className="font-light tracking-wide"
-                onClick={() => window.location.href = 'mailto:contato@3foro.io'}
+                onClick={() => window.location.href = 'mailto:contato@0ryzon.io'}
               >
                 Falar com Especialista
               </Button>
