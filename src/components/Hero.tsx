@@ -17,19 +17,19 @@ const Hero = () => {
         />
         <div className="absolute inset-0 bg-background/80" />
       </div>
-
-      {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 z-0 opacity-[0.08]" 
+      
+      {/* Glowing Orbs - Multiple layers */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[140px] animate-float" />
+      <div className="absolute bottom-1/4 right-1/4 w-[450px] h-[450px] bg-secondary/25 rounded-full blur-[130px] animate-float" style={{ animationDelay: '3s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/15 rounded-full blur-[150px] animate-float" style={{ animationDelay: '1.5s' }} />
+      
+      {/* Subtle dots pattern */}
+      <div className="absolute inset-0 z-0 opacity-[0.03]" 
            style={{ 
-             backgroundImage: `linear-gradient(hsl(var(--primary)) 1.5px, transparent 1.5px), linear-gradient(90deg, hsl(var(--primary)) 1.5px, transparent 1.5px)`,
-             backgroundSize: '60px 60px',
-             animation: 'float 20s ease-in-out infinite'
+             backgroundImage: `radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px)`,
+             backgroundSize: '40px 40px'
            }} 
       />
-      
-      {/* Glowing Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] animate-float" style={{ animationDelay: '3s' }} />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
