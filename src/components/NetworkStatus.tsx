@@ -74,33 +74,6 @@ const NetworkStatus = () => {
                 ))}
               </div>
             </div>
-
-            <div className="flex gap-2 pt-4 border-t border-border">
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="flex-1 text-xs"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.open('https://status.3foro.io', '_blank');
-                }}
-              >
-                <ExternalLink className="w-3 h-3" />
-                Status Page
-              </Button>
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="flex-1 text-xs"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.open('https://grafana.3foro.io', '_blank');
-                }}
-              >
-                <ExternalLink className="w-3 h-3" />
-                Grafana
-              </Button>
-            </div>
           </div>
         )}
       </div>
