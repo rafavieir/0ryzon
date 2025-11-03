@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 const NetworkStatus = () => {
-  const [open, setOpen] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const nodes = [
     { name: "Ethereum Validator", status: "online", uptime: "99.8%" },
@@ -19,25 +18,28 @@ const NetworkStatus = () => {
 
   return (
     <div className="fixed bottom-8 right-8 z-50">
-      <Popover open={open} onOpenChange={setOpen}>
-        <PopoverTrigger asChild>
-          <button className="flex gap-2 items-center px-4 py-2 border border-border bg-background/80 backdrop-blur-sm cursor-pointer hover:bg-background transition-colors">
+      <div 
+        className={`
+          border border-border bg-background/95 backdrop-blur-sm cursor-pointer
+          transition-all duration-300 ease-out origin-bottom-right overflow-hidden
+          ${expanded ? 'w-80 p-6' : 'w-auto px-4 py-2'}
+        `}
+        onClick={() => setExpanded(!expanded)}
+      >
+        {!expanded ? (
+          <div className="flex gap-2 items-center">
             <div className="flex gap-1.5">
               <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '0ms' }} />
               <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '150ms' }} />
               <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '300ms' }} />
             </div>
             <span className="text-xs font-light text-green-500 tracking-wide">NODES ONLINE</span>
-          </button>
-        </PopoverTrigger>
-        <PopoverContent 
-          className="w-80 p-6 animate-scale-in origin-bottom-right" 
-          align="end" 
-          side="top"
-          sideOffset={8}
-        >
-          <div className="space-y-6">
-            <h2 className="font-serif text-lg border-b border-border pb-2">Status da Infraestrutura</h2>
+          </div>
+        ) : (
+          <div className="space-y-6 animate-fade-in">
+            <div className="flex items-center justify-between">
+              <h2 className="font-serif text-lg border-b border-border pb-2 flex-1">Status da Infraestrutura</h2>
+            </div>
             
             <div>
               <h3 className="text-sm font-light mb-3 tracking-wide">VALIDADORES & NODES</h3>
@@ -71,8 +73,8 @@ const NetworkStatus = () => {
               </div>
             </div>
           </div>
-        </PopoverContent>
-      </Popover>
+        )}
+      </div>
     </div>
   );
 };
