@@ -14,12 +14,12 @@ const differentials = [
     description: "Conhecimento profundo em cloud, containers, networking e arquitetura corporativa."
   },
   {
-    title: "Presença LATAM",
-    description: "Proximidade linguística e técnica com clientes e comunidades da região."
+    title: "Redundância & Resiliência",
+    description: "Arquitetura distribuída com múltiplos pontos de presença garantindo alta disponibilidade."
   },
   {
     title: "Educação & Expansão",
-    description: "Compromisso com o crescimento e educação do ecossistema Web3 regional."
+    description: "Compromisso com o crescimento e educação do ecossistema Web3 global."
   }
 ];
 

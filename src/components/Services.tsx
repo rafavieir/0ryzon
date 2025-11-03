@@ -29,8 +29,8 @@ const services = [
   },
   {
     icon: Users,
-    title: "Integração LATAM",
-    description: "Conexão entre datacenters locais e o ecossistema global de computação descentralizada."
+    title: "Integração Global",
+    description: "Conexão entre datacenters distribuídos e o ecossistema global de computação descentralizada."
   }
 ];
 

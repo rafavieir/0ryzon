@@ -10,9 +10,9 @@ const Vision = () => {
           <div>
             <h3 className="text-3xl font-light mb-6">Visão</h3>
             <p className="text-muted-foreground font-light leading-relaxed text-lg">
-              Ser o principal operador e integrador de infraestrutura descentralizada da América Latina, 
-              conectando provedores locais, empresas e comunidades a um novo modelo de internet — 
-              aberta, confiável e colaborativa.
+              Ser um operador líder de infraestrutura descentralizada, 
+              conectando provedores distribuídos, empresas e comunidades a um novo modelo de internet — 
+              aberta, resiliente e colaborativa.
             </p>
           </div>
 

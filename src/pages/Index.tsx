@@ -4,6 +4,7 @@ import Differentials from "@/components/Differentials";
 import Networks from "@/components/Networks";
 import Vision from "@/components/Vision";
 import Footer from "@/components/Footer";
+import NetworkStatus from "@/components/NetworkStatus";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <Networks />
       <Vision />
       <Footer />
+      <NetworkStatus />
     </div>
   );
 };

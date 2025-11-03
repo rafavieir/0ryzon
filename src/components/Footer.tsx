@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <span className="text-2xl tracking-wider text-foreground font-light">3FORO</span>
             <p className="text-muted-foreground font-light leading-relaxed">
-              Infraestrutura descentralizada enterprise para América Latina
+              Infraestrutura descentralizada enterprise de alta disponibilidade
             </p>
           </div>
 

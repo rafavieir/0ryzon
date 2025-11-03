@@ -4,8 +4,17 @@ import heroImage from "@/assets/hero-network.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-background border-b border-border">
-      <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl">
+    <section className="relative min-h-screen flex items-center bg-background border-b border-border overflow-hidden">
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" 
+           style={{
+             backgroundImage: `linear-gradient(to right, hsl(var(--foreground)) 1px, transparent 1px),
+                              linear-gradient(to bottom, hsl(var(--foreground)) 1px, transparent 1px)`,
+             backgroundSize: '80px 80px'
+           }} 
+      />
+      
+      <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl relative z-10">
         <div className="space-y-16">
           {/* Logo */}
           <div className="inline-block">
@@ -23,7 +32,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-2xl">
-              Operação profissional de nodes, validadores e provedores de computação descentralizada para LATAM
+              Operação profissional de nodes, validadores e infraestrutura descentralizada com alta disponibilidade
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 pt-4">
