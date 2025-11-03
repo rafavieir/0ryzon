@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-16">
           {/* Brand */}
           <div className="space-y-4">
-            <span className="text-2xl tracking-wider text-foreground font-light">3FORO</span>
+            <span className="text-2xl tracking-wider text-foreground font-light">³Øryzon</span>
             <p className="text-muted-foreground font-light leading-relaxed">
               Infraestrutura descentralizada enterprise de alta disponibilidade
             </p>
@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-light text-foreground">Contato</h4>
             <div className="space-y-2 text-sm font-light">
-              <p className="text-muted-foreground">contato@3foro.io</p>
+              <p className="text-muted-foreground">contato@³Øryzon.io</p>
             </div>
           </div>
 
@@ -27,7 +27,7 @@ const Footer = () => {
             <h4 className="font-light text-foreground">Monitoramento</h4>
             <div className="flex flex-col gap-2 text-sm font-light">
               <a 
-                href="https://status.3foro.io" 
+                href="https://status.³Øryzon.io" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
@@ -36,7 +36,7 @@ const Footer = () => {
                 Status Page
               </a>
               <a 
-                href="https://grafana.3foro.io" 
+                href="https://grafana.³Øryzon.io" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
@@ -52,7 +52,7 @@ const Footer = () => {
             <h4 className="font-light text-foreground">Redes</h4>
             <div className="flex flex-col gap-2 text-sm font-light">
               <a 
-                href="https://instagram.com/3foro.nodes" 
+                href="https://instagram.com/³Øryzon.nodes" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -60,7 +60,7 @@ const Footer = () => {
                 Instagram
               </a>
               <a 
-                href="https://github.com/3FORO" 
+                href="https://github.com/³Øryzon" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -73,7 +73,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-border text-sm text-muted-foreground font-light">
-          <p>© {new Date().getFullYear()} 3FORO</p>
+          <p>© {new Date().getFullYear()} ³Øryzon</p>
         </div>
       </div>
     </footer>
