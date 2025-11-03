@@ -44,15 +44,15 @@ const Differentials = () => {
             {differentials.map((item, index) => (
               <div 
                 key={index}
-                className="flex gap-4 p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-md"
+                className="flex gap-4 p-7 rounded-2xl glass-effect hover:border-primary transition-all duration-500 hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] group hover:scale-[1.02]"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <CheckCircle2 className="w-6 h-6 text-secondary" />
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <CheckCircle2 className="w-7 h-7 text-accent group-hover:animate-pulse" />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors duration-300">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
               </div>
