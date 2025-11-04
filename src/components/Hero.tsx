@@ -35,9 +35,15 @@ const Hero = () => {
           {/* Main Content */}
           <div className="space-y-8 max-w-3xl">
             <div className="relative">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.1] text-foreground relative z-10 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-                {t('hero.title')}
-              </h1>
+              {/* Gooey Transition Title */}
+              <div className="gooey-container">
+                <h1 className="gooey-text text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.1] text-foreground">
+                  {t('hero.title')}
+                </h1>
+                <h1 className="gooey-text text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.1] text-foreground">
+                  {t('hero.titleAlt')}
+                </h1>
+              </div>
               
               {/* Crypto-style animated grid */}
               <div className="absolute -right-20 top-0 w-64 h-64 opacity-30 pointer-events-none hidden lg:block">
@@ -76,6 +82,42 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes fade {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        @keyframes combine {
+          to { 
+            filter: blur(10px) contrast(30); 
+          }
+        }
+
+        .gooey-container {
+          background: hsl(var(--background));
+          animation: combine 4s linear infinite;
+          animation-timing-function: linear(0, 0 45%, 1 50%, 0 55% 90%, 1 95%, 0 100%);
+          padding: 0;
+          display: grid;
+          place-items: start;
+          isolation: isolate;
+        }
+
+        .gooey-text {
+          animation: fade 4s linear infinite;
+          grid-area: 1 / 1;
+        }
+
+        .gooey-text:first-child {
+          animation-timing-function: linear(1 45%, 0 55% 90%, 1 100%);
+        }
+
+        .gooey-text:nth-child(2) {
+          animation-timing-function: linear(0 45%, 1 55% 90%, 0 100%);
+        }
+      `}</style>
     </section>
   );
 };

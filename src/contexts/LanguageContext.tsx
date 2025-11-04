@@ -49,8 +49,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 const translations = {
   pt: {
     hero: {
-      title: "Infraestrutura Descentralizada de Alta Disponibilidade",
-      subtitle: "Operamos nodes e validadores em múltiplas redes blockchain com expertise corporativo, segurança e transparência total."
+      title: "Soluções para Web3",
+      titleAlt: "Descentralizadas",
+      subtitle: "Alta disponibilidade, observabilidade e redundância para redes blockchain e projetos descentralizados."
     },
     networkStatus: {
       title: "Status em Tempo Real",
@@ -97,19 +98,19 @@ const translations = {
     },
     services: {
       title: "Serviços",
-      subtitle: "Soluções enterprise para o ecossistema descentralizado",
+      subtitle: "Soluções profissionais para o ecossistema Web3",
       items: [
         {
-          title: "Node Operators",
-          description: "Infraestrutura gerenciada para validadores e nodes em múltiplas redes"
+          title: "Alta Disponibilidade",
+          description: "Infraestrutura resiliente com redundância e uptime garantido para suas operações"
         },
         {
-          title: "DePIN Infrastructure",
-          description: "Provedores de recursos físicos descentralizados"
+          title: "Observabilidade",
+          description: "Monitoramento 24/7 com métricas, logs e alertas em tempo real"
         },
         {
-          title: "Consultoria Web3",
-          description: "Arquitetura e estratégia para projetos descentralizados"
+          title: "Soluções Web3",
+          description: "Arquitetura e implementação de projetos descentralizados"
         }
       ]
     },
@@ -124,8 +125,9 @@ const translations = {
   },
   es: {
     hero: {
-      title: "Infraestructura Descentralizada de Alta Disponibilidad",
-      subtitle: "Operamos nodos y validadores en múltiples redes blockchain con experiencia corporativa, seguridad y transparencia total."
+      title: "Soluciones para Web3",
+      titleAlt: "Descentralizadas",
+      subtitle: "Alta disponibilidad, observabilidad y redundancia para redes blockchain y proyectos descentralizados."
     },
     networkStatus: {
       title: "Estado en Tiempo Real",
@@ -172,19 +174,19 @@ const translations = {
     },
     services: {
       title: "Servicios",
-      subtitle: "Soluciones enterprise para el ecosistema descentralizado",
+      subtitle: "Soluciones profesionales para el ecosistema Web3",
       items: [
         {
-          title: "Operadores de Nodos",
-          description: "Infraestructura gestionada para validadores y nodos en múltiples redes"
+          title: "Alta Disponibilidad",
+          description: "Infraestructura resiliente con redundancia y uptime garantizado para sus operaciones"
         },
         {
-          title: "Infraestructura DePIN",
-          description: "Proveedores de recursos físicos descentralizados"
+          title: "Observabilidad",
+          description: "Monitoreo 24/7 con métricas, logs y alertas en tiempo real"
         },
         {
-          title: "Consultoría Web3",
-          description: "Arquitectura y estrategia para proyectos descentralizados"
+          title: "Soluciones Web3",
+          description: "Arquitectura e implementación de proyectos descentralizados"
         }
       ]
     },
@@ -199,8 +201,9 @@ const translations = {
   },
   en: {
     hero: {
-      title: "High Availability Decentralized Infrastructure",
-      subtitle: "We operate nodes and validators across multiple blockchain networks with corporate expertise, security and full transparency."
+      title: "Solutions for Web3",
+      titleAlt: "Decentralized",
+      subtitle: "High availability, observability and redundancy for blockchain networks and decentralized projects."
     },
     networkStatus: {
       title: "Real-Time Status",
@@ -247,19 +250,19 @@ const translations = {
     },
     services: {
       title: "Services",
-      subtitle: "Enterprise solutions for the decentralized ecosystem",
+      subtitle: "Professional solutions for the Web3 ecosystem",
       items: [
         {
-          title: "Node Operators",
-          description: "Managed infrastructure for validators and nodes across multiple networks"
+          title: "High Availability",
+          description: "Resilient infrastructure with redundancy and guaranteed uptime for your operations"
         },
         {
-          title: "DePIN Infrastructure",
-          description: "Decentralized physical resource providers"
+          title: "Observability",
+          description: "24/7 monitoring with real-time metrics, logs and alerts"
         },
         {
-          title: "Web3 Consulting",
-          description: "Architecture and strategy for decentralized projects"
+          title: "Web3 Solutions",
+          description: "Architecture and implementation of decentralized projects"
         }
       ]
     },
