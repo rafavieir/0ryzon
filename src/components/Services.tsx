@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Server, Activity, Blocks, ChevronUp, ChevronDown } from "lucide-react";
+import { Server, Activity, Blocks, ArrowUp, ArrowDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
@@ -47,11 +47,11 @@ const Services = () => {
   return (
     <section id="services" className="py-32 border-t border-border overflow-hidden">
       <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-7xl">
-        <div className="mb-20 text-center">
-          <h2 className="text-4xl sm:text-5xl font-light mb-4">
+        <div className="mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl font-display font-light mb-3">
             {t('services.title')}
           </h2>
-          <p className="text-lg text-muted-foreground font-light max-w-2xl mx-auto">
+          <p className="text-base text-muted-foreground font-light max-w-2xl mx-auto">
             {t('services.subtitle')}
           </p>
         </div>
@@ -63,18 +63,18 @@ const Services = () => {
               {/* Mobile Navigation Arrows */}
               <button
                 onClick={() => updateCarousel(currentIndex - 1)}
-                className="lg:hidden absolute top-4 left-1/2 -translate-x-1/2 z-30 w-14 h-14 flex items-center justify-center bg-transparent hover:scale-110 transition-transform"
+                className="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 z-30 w-12 h-12 flex items-center justify-center bg-transparent hover:opacity-70 transition-all group"
                 aria-label="Previous service"
               >
-                <ChevronUp className="w-10 h-10 text-primary" />
+                <ArrowUp className="w-6 h-6 text-primary stroke-[1.5] group-hover:-translate-y-1 transition-transform" />
               </button>
               
               <button
                 onClick={() => updateCarousel(currentIndex + 1)}
-                className="lg:hidden absolute bottom-4 left-1/2 -translate-x-1/2 z-30 w-14 h-14 flex items-center justify-center bg-transparent hover:scale-110 transition-transform"
+                className="lg:hidden absolute bottom-0 left-1/2 -translate-x-1/2 z-30 w-12 h-12 flex items-center justify-center bg-transparent hover:opacity-70 transition-all group"
                 aria-label="Next service"
               >
-                <ChevronDown className="w-10 h-10 text-primary" />
+                <ArrowDown className="w-6 h-6 text-primary stroke-[1.5] group-hover:translate-y-1 transition-transform" />
               </button>
 
               {/* Cards */}
@@ -87,9 +87,9 @@ const Services = () => {
                       className={`carousel-card ${getCardClass(index)}`}
                       onClick={() => updateCarousel(index)}
                     >
-                      <div className="w-full h-full bg-card rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center text-center border border-border">
-                        <Icon className="w-16 h-16 text-primary mb-6" />
-                        <h3 className="text-2xl font-light mb-3">{service.title}</h3>
+                      <div className="w-full h-full bg-card rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center text-center border border-border transition-all hover:shadow-2xl">
+                        <Icon className="w-12 h-12 text-primary mb-4 stroke-[1.5]" />
+                        <h3 className="text-xl font-display font-light mb-2">{service.title}</h3>
                         <p className="text-muted-foreground font-light leading-relaxed text-sm">
                           {service.description}
                         </p>
@@ -104,29 +104,29 @@ const Services = () => {
           {/* Controls Section */}
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-8">
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex flex-row gap-6">
+            <div className="hidden lg:flex flex-row gap-4">
               <button
                 onClick={() => updateCarousel(currentIndex - 1)}
-                className="w-16 h-16 flex items-center justify-center bg-transparent hover:scale-110 transition-transform"
+                className="w-12 h-12 flex items-center justify-center bg-transparent hover:opacity-70 transition-all group"
                 aria-label="Previous service"
               >
-                <ChevronUp className="w-12 h-12 text-primary" />
+                <ArrowUp className="w-7 h-7 text-primary stroke-[1.5] group-hover:-translate-y-1 transition-transform" />
               </button>
               <button
                 onClick={() => updateCarousel(currentIndex + 1)}
-                className="w-16 h-16 flex items-center justify-center bg-transparent hover:scale-110 transition-transform"
+                className="w-12 h-12 flex items-center justify-center bg-transparent hover:opacity-70 transition-all group"
                 aria-label="Next service"
               >
-                <ChevronDown className="w-12 h-12 text-primary" />
+                <ArrowDown className="w-7 h-7 text-primary stroke-[1.5] group-hover:translate-y-1 transition-transform" />
               </button>
             </div>
 
-            {/* Member Info */}
+            {/* Service Info */}
             <div className="text-center lg:text-left">
-              <h3 className="text-3xl sm:text-4xl font-light mb-2 text-foreground relative inline-block">
+              <h3 className="text-2xl sm:text-3xl font-display font-light mb-2 text-foreground relative inline-block">
                 {services[currentIndex].title}
               </h3>
-              <p className="text-lg text-muted-foreground font-light mt-4 max-w-md">
+              <p className="text-base text-muted-foreground font-light mt-3 max-w-md">
                 {services[currentIndex].description}
               </p>
             </div>
@@ -153,8 +153,8 @@ const Services = () => {
       <style>{`
         .carousel-card {
           position: absolute;
-          width: 400px;
-          height: 280px;
+          width: 380px;
+          height: 260px;
           transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           cursor: pointer;
           transform-style: preserve-3d;
@@ -188,31 +188,31 @@ const Services = () => {
 
         @media (max-width: 1024px) {
           .carousel-card {
-            width: 340px;
-            height: 240px;
+            width: 320px;
+            height: 220px;
           }
 
           .carousel-card-up-1 {
-            transform: translateY(-120px) scale(0.85) translateZ(-100px);
+            transform: translateY(-110px) scale(0.85) translateZ(-100px);
           }
 
           .carousel-card-down-1 {
-            transform: translateY(120px) scale(0.85) translateZ(-100px);
+            transform: translateY(110px) scale(0.85) translateZ(-100px);
           }
         }
 
         @media (max-width: 640px) {
           .carousel-card {
-            width: 300px;
-            height: 220px;
+            width: 280px;
+            height: 200px;
           }
 
           .carousel-card-up-1 {
-            transform: translateY(-100px) scale(0.8) translateZ(-100px);
+            transform: translateY(-90px) scale(0.8) translateZ(-100px);
           }
 
           .carousel-card-down-1 {
-            transform: translateY(100px) scale(0.8) translateZ(-100px);
+            transform: translateY(90px) scale(0.8) translateZ(-100px);
           }
         }
       `}</style>

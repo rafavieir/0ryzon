@@ -26,16 +26,16 @@ const Hero = () => {
       <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl relative z-10">
         <div className="space-y-16">
           {/* Logo */}
-          <div className="inline-block">
-            <span className="text-2xl tracking-wider text-foreground font-light">
+          <div className="inline-block animate-fade-in">
+            <span className="text-xl tracking-wider text-foreground font-mono font-light">
               ³Øryzon web3 Solutions
             </span>
           </div>
 
           {/* Main Content */}
-          <div className="space-y-12 max-w-3xl">
+          <div className="space-y-8 max-w-3xl">
             <div className="relative">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light leading-[1.1] text-foreground relative z-10">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-light leading-[1.1] text-foreground relative z-10 animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 {t('hero.title')}
               </h1>
               
@@ -70,7 +70,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-2xl">
+            <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
               {t('hero.subtitle')}
             </p>
           </div>
