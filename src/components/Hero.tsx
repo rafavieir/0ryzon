@@ -91,22 +91,20 @@ const Hero = () => {
 
         @keyframes combine {
           to { 
-            filter: blur(10px) contrast(30); 
+            filter: blur(8px) contrast(20); 
           }
         }
 
         .gooey-container {
-          background: hsl(var(--background));
-          animation: combine 4s linear infinite;
+          animation: combine 6s linear infinite;
           animation-timing-function: linear(0, 0 45%, 1 50%, 0 55% 90%, 1 95%, 0 100%);
           padding: 0;
           display: grid;
           place-items: start;
-          isolation: isolate;
         }
 
         .gooey-text {
-          animation: fade 4s linear infinite;
+          animation: fade 6s linear infinite;
           grid-area: 1 / 1;
         }
 
