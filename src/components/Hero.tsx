@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="space-y-16">
           {/* Logo */}
           <div className="inline-block animate-fade-in">
-            <span className="text-xl tracking-wider text-foreground font-mono font-light">
+            <span className="text-xl tracking-wider text-foreground font-light">
               ³Øryzon web3 Solutions
             </span>
           </div>
@@ -35,7 +35,7 @@ const Hero = () => {
           {/* Main Content */}
           <div className="space-y-8 max-w-3xl">
             <div className="relative">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-light leading-[1.1] text-foreground relative z-10 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.1] text-foreground relative z-10 animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 {t('hero.title')}
               </h1>
               

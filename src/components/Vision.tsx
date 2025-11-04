@@ -9,7 +9,7 @@ const Vision = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {/* Vision */}
           <div className="animate-fade-in">
-            <h3 className="text-2xl font-display font-light mb-4">{t('vision.visionTitle')}</h3>
+            <h3 className="text-2xl font-light mb-4">{t('vision.visionTitle')}</h3>
             <p className="text-muted-foreground font-light leading-relaxed text-base">
               {t('vision.visionText')}
             </p>
@@ -17,7 +17,7 @@ const Vision = () => {
 
           {/* Mission */}
           <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <h3 className="text-2xl font-display font-light mb-4">{t('vision.missionTitle')}</h3>
+            <h3 className="text-2xl font-light mb-4">{t('vision.missionTitle')}</h3>
             <p className="text-muted-foreground font-light leading-relaxed text-base">
               {t('vision.missionText')}
             </p>

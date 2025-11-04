@@ -48,7 +48,7 @@ const Services = () => {
     <section id="services" className="py-32 border-t border-border overflow-hidden">
       <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-7xl">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl sm:text-4xl font-display font-light mb-3">
+          <h2 className="text-3xl sm:text-4xl font-light mb-3">
             {t('services.title')}
           </h2>
           <p className="text-base text-muted-foreground font-light max-w-2xl mx-auto">
@@ -89,7 +89,7 @@ const Services = () => {
                     >
                       <div className="w-full h-full bg-card rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center text-center border border-border transition-all hover:shadow-2xl">
                         <Icon className="w-12 h-12 text-primary mb-4 stroke-[1.5]" />
-                        <h3 className="text-xl font-display font-light mb-2">{service.title}</h3>
+                        <h3 className="text-xl font-light mb-2">{service.title}</h3>
                         <p className="text-muted-foreground font-light leading-relaxed text-sm">
                           {service.description}
                         </p>
@@ -123,7 +123,7 @@ const Services = () => {
 
             {/* Service Info */}
             <div className="text-center lg:text-left">
-              <h3 className="text-2xl sm:text-3xl font-display font-light mb-2 text-foreground relative inline-block">
+              <h3 className="text-2xl sm:text-3xl font-light mb-2 text-foreground relative inline-block">
                 {services[currentIndex].title}
               </h3>
               <p className="text-base text-muted-foreground font-light mt-3 max-w-md">

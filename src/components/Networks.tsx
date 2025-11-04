@@ -18,7 +18,7 @@ const Networks = () => {
     <section className="py-24 border-t border-border">
       <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl">
         <div className="mb-16">
-          <h2 className="text-3xl sm:text-4xl font-display font-light mb-3">
+          <h2 className="text-3xl sm:text-4xl font-light mb-3">
             {t('networks.title')}
           </h2>
           <p className="text-base text-muted-foreground font-light max-w-2xl">
@@ -39,7 +39,7 @@ const Networks = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-muted-foreground font-mono font-light text-xs">
+          <p className="text-muted-foreground font-light text-xs italic">
             {t('networks.more')}
           </p>
         </div>
