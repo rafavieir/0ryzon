@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink } from "lucide-react";
+import { Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const NetworkStatus = () => {
@@ -24,18 +24,43 @@ const NetworkStatus = () => {
         className={`
           border border-border bg-background/95 backdrop-blur-sm cursor-pointer
           transition-all duration-300 ease-out origin-bottom-right overflow-hidden
-          ${expanded ? 'w-80 p-6' : 'w-auto px-4 py-2'}
+          ${expanded ? 'w-80 p-6' : 'w-auto px-6 py-3'}
         `}
         onClick={() => setExpanded(!expanded)}
       >
         {!expanded ? (
-          <div className="flex gap-2 items-center">
-            <div className="flex gap-1.5">
-              <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '0ms' }} />
-              <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '150ms' }} />
-              <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '300ms' }} />
+          <div className="space-y-3">
+            <div className="flex gap-3 items-center">
+              <div className="flex gap-1.5">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '0ms' }} />
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '150ms' }} />
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '300ms' }} />
+              </div>
+              <span className="text-sm font-light text-green-500 tracking-wide">NODES ONLINE</span>
             </div>
-            <span className="text-xs font-light text-green-500 tracking-wide">NODES ONLINE</span>
+            <div className="flex gap-3 items-center justify-center">
+              <a 
+                href="https://grafana.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Globe className="w-3.5 h-3.5" />
+                <span>Grafana</span>
+              </a>
+              <div className="w-px h-3 bg-border" />
+              <a 
+                href="https://statuspage.io" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Globe className="w-3.5 h-3.5" />
+                <span>StatusPage</span>
+              </a>
+            </div>
           </div>
         ) : (
           <div className="space-y-6 animate-fade-in">
