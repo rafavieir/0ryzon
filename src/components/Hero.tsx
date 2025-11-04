@@ -3,6 +3,7 @@ import { Network, Globe, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-network.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "./LanguageSelector";
+import ThemeToggle from "./ThemeToggle";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -18,8 +19,9 @@ const Hero = () => {
            }} 
       />
 
-      {/* Language Selector */}
-      <div className="absolute top-8 right-8 z-20">
+      {/* Language Selector and Theme Toggle */}
+      <div className="absolute top-8 right-8 z-20 flex gap-2">
+        <ThemeToggle />
         <LanguageSelector />
       </div>
       
