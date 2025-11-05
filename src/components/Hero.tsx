@@ -30,7 +30,7 @@ const Hero = () => {
           {/* Logo */}
           <div className="inline-block animate-fade-in">
             <span className="text-xl tracking-wider text-foreground font-light">
-              ³Øryzon web3 Solutions
+              ³Øryzon Solutions
             </span>
           </div>
 
