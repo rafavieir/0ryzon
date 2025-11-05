@@ -62,6 +62,17 @@ const NetworkStatus = () => {
               </a>
             </div>
           </div>
+          <div className="w-px h-3 bg-border" />
+<a 
+  href="https://seublog.com" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  onClick={(e) => e.stopPropagation()}
+  className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors"
+>
+  <Book className="w-3.5 h-3.5" />
+  <span>Blog</span>
+</a>
         ) : (
           <div className="space-y-6 animate-fade-in">
             <div className="flex items-center justify-between">
