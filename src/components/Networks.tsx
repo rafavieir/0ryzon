@@ -1,10 +1,13 @@
 import { useState } from "react";
-import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Switch } from "@/components/ui/switch"; // do shadcn/ui (ou troca por teu toggle preferido)
-import { Label } from "@/components/ui/label";
 
-const mainnets = [
+type Network = {
+  name: string;
+  logo: string;
+  href: string;
+};
+
+const mainnets: Network[] = [
   {
     name: "Akash Network",
     logo: "https://raw.githubusercontent.com/ovrclk/docs/master/static/img/akash-logo.svg",
@@ -47,7 +50,7 @@ const mainnets = [
   },
 ];
 
-const testnets = [
+const testnets: Network[] = [
   {
     name: "Nym Testnet",
     logo: "https://nymtech.net/_next/image?url=%2Fnym-logo.svg&w=128&q=75",
@@ -79,8 +82,8 @@ const Networks = () => {
   return (
     <section className="py-24 border-t border-border">
       <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl">
-        {/* título e subtítulo */}
-        <div className="mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between">
+        {/* título + toggle */}
+        <div className="mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <h2 className="text-3xl sm:text-4xl font-light mb-2">
               {t("networks.title")}
@@ -90,20 +93,34 @@ const Networks = () => {
             </p>
           </div>
 
-          {/* toggle mainnet / testnet */}
-          <div className="flex items-center gap-2 mt-6 sm:mt-0">
-            <Label htmlFor="testnet-mode" className="text-sm text-muted-foreground">
-              {showTestnets ? "Testnets" : "Mainnets"}
-            </Label>
-            <Switch
-              id="testnet-mode"
-              checked={showTestnets}
-              onCheckedChange={setShowTestnets}
-            />
+          {/* toggle simples */}
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-1 py-1 text-xs">
+            <button
+              type="button"
+              onClick={() => setShowTestnets(false)}
+              className={`px-3 py-1 rounded-full transition-colors ${
+                !showTestnets
+                  ? "bg-foreground text-background"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Mainnets
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowTestnets(true)}
+              className={`px-3 py-1 rounded-full transition-colors ${
+                showTestnets
+                  ? "bg-foreground text-background"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Testnets
+            </button>
           </div>
         </div>
 
-        {/* grade de logos */}
+        {/* grade / carrossel de logos */}
         <div className="relative">
           <div className="flex gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0">
             {networks.map((network, index) => (
@@ -124,12 +141,11 @@ const Networks = () => {
                 "
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="relative w-12 h-12 mb-3">
-                  <Image
+                <div className="w-12 h-12 mb-3 flex items-center justify-center">
+                  <img
                     src={network.logo}
                     alt={network.name}
-                    fill
-                    className="object-contain group-hover:scale-110 transition-transform"
+                    className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform"
                   />
                 </div>
                 <span className="text-foreground font-light text-xs text-center leading-snug group-hover:text-foreground">
