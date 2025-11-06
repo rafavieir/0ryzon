@@ -10,7 +10,6 @@ const Index = () => {
       <Hero />
       <Services />
       <Networks />
-      <Vision />
       <Footer />
       <NetworkStatus />
     </div>
