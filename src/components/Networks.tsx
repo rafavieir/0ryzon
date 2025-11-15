@@ -1,164 +1,120 @@
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-type Network = {
+type Client = {
+  id: string;
   name: string;
-  logo: string;
-  href: string;
+  tag: string;
 };
 
-const mainnets: Network[] = [
+const clients: Client[] = [
   {
-    name: "Akash Network",
-    logo: "https://raw.githubusercontent.com/ovrclk/docs/master/static/img/akash-logo.svg",
-    href: "https://gitbook-oryzon/akash",
+    id: "opus",
+    name: "Opus Construtora",
+    tag: "Construção & Reformas",
   },
   {
-    name: "Peaq",
-    logo: "https://peaq.network/peaq-logo.svg",
-    href: "https://gitbook-oryzon/peaq",
-  },
-  {
-    name: "Meson Network",
-    logo: "https://cdn.meson.network/brand/logo.svg",
-    href: "https://gitbook-oryzon/meson",
-  },
-  {
-    name: "Storj",
-    logo: "https://www.storj.io/hubfs/raw_assets/public/storj-website/images/logos/storj-logo.svg",
-    href: "https://gitbook-oryzon/storj",
-  },
-  {
-    name: "Mysterium",
-    logo: "https://mysterium.network/wp-content/uploads/2023/03/mysterium-logo.svg",
-    href: "https://gitbook-oryzon/mysterium",
-  },
-  {
-    name: "DIMO",
-    logo: "https://dimo.zone/_next/static/media/dimo-logo.42ad7b4f.svg",
-    href: "https://gitbook-oryzon/dimo",
-  },
-  {
-    name: "Grass",
-    logo: "https://www.getgrass.io/_next/image?url=%2Fgrass-logo.png&w=256&q=75",
-    href: "https://gitbook-oryzon/grass",
-  },
-  {
-    name: "DePIN Alliance",
-    logo: "https://depinalliance.org/wp-content/uploads/2023/11/depin-alliance-logo.svg",
-    href: "https://gitbook-oryzon/depin",
-  },
-];
-
-const testnets: Network[] = [
-  {
-    name: "Nym Testnet",
-    logo: "https://nymtech.net/_next/image?url=%2Fnym-logo.svg&w=128&q=75",
-    href: "https://gitbook-oryzon/nym-testnet",
-  },
-  {
-    name: "Nosana Testnet",
-    logo: "https://docs.nosana.io/img/nosana-logo.svg",
-    href: "https://gitbook-oryzon/nosana-testnet",
-  },
-  {
-    name: "Subspace Gemini",
-    logo: "https://subspace.network/assets/img/subspace_logo_dark.svg",
-    href: "https://gitbook-oryzon/subspace-gemini",
-  },
-  {
-    name: "Peaq Testnet (krest)",
-    logo: "https://peaq.network/peaq-logo.svg",
-    href: "https://gitbook-oryzon/peaq-testnet",
+    id: "mordelicia",
+    name: "Mordelicia",
+    tag: "Food & Delivery",
   },
 ];
 
 const Networks = () => {
   const { t } = useLanguage();
-  const [showTestnets, setShowTestnets] = useState(false);
+  const [activeClientId, setActiveClientId] = useState<string>("opus");
 
-  const networks = showTestnets ? testnets : mainnets;
+  const getStoryData = (id: string) => {
+    const items = t("clients.items") as any[];
+    if (!Array.isArray(items)) return null;
+
+    if (id === "opus") return items[0];
+    if (id === "mordelicia") return items[1];
+
+    return items[0];
+  };
+
+  const story = getStoryData(activeClientId);
 
   return (
-    <section className="py-24 border-t border-border">
+    <section className="py-24 border-t border-border" id="networks">
       <div className="container mx-auto px-8 sm:px-12 lg:px-16 max-w-6xl">
-        {/* título + toggle */}
-        <div className="mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div>
-            <h2 className="text-3xl sm:text-4xl font-light mb-2">
-              {t("networks.title")}
-            </h2>
-            <p className="text-base text-muted-foreground font-light max-w-2xl">
-              {t("networks.subtitle")}
-            </p>
-          </div>
-
-          {/* toggle simples */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-1 py-1 text-xs">
-            <button
-              type="button"
-              onClick={() => setShowTestnets(false)}
-              className={`px-3 py-1 rounded-full transition-colors ${
-                !showTestnets
-                  ? "bg-foreground text-background"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Mainnets
-            </button>
-            <button
-              type="button"
-              onClick={() => setShowTestnets(true)}
-              className={`px-3 py-1 rounded-full transition-colors ${
-                showTestnets
-                  ? "bg-foreground text-background"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Testnets
-            </button>
-          </div>
+        {/* título */}
+        <div className="mb-10 flex flex-col gap-3">
+          <h2 className="text-3xl sm:text-4xl font-light">{t("clients.title")}</h2>
+          <p className="text-base text-muted-foreground font-light max-w-2xl">
+            {t("clients.subtitle")}
+          </p>
         </div>
 
-        {/* grade / carrossel de logos */}
-        <div className="relative">
-          <div className="flex gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-4 md:gap-6 md:overflow-visible md:pb-0">
-            {networks.map((network, index) => (
-              <a
-                key={network.name}
-                href={network.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  group flex flex-col items-center justify-center
-                  min-w-[120px] md:min-w-0
-                  rounded-xl border border-border bg-background/80
-                  hover:bg-muted/40 hover:border-foreground/40
-                  transition-all duration-200
-                  shadow-sm hover:shadow-md
-                  px-4 py-6
-                  animate-fade-in
-                "
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                <div className="w-12 h-12 mb-3 flex items-center justify-center">
-                  <img
-                    src={network.logo}
-                    alt={network.name}
-                    className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform"
-                  />
-                </div>
-                <span className="text-foreground font-light text-xs text-center leading-snug group-hover:text-foreground">
-                  {network.name}
-                </span>
-              </a>
-            ))}
+        {/* layout geral */}
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.6fr)] items-start">
+          {/* lista de clientes */}
+          <div className="flex flex-col gap-3">
+            {clients.map((client) => {
+              const active = client.id === activeClientId;
+
+              return (
+                <button
+                  key={client.id}
+                  onClick={() => setActiveClientId(client.id)}
+                  className={`
+                    w-full text-left rounded-2xl border px-5 py-5 transition-all duration-200
+                    flex items-center justify-between
+                    ${
+                      active
+                        ? "border-primary/70 bg-primary/5 shadow-sm"
+                        : "border-border bg-background/60 hover:bg-muted/40 hover:border-foreground/30"
+                    }
+                  `}
+                >
+                  <div className="flex flex-col">
+                    <span className="text-sm font-medium text-foreground">
+                      {client.name}
+                    </span>
+                    <span className="text-xs text-muted-foreground mt-1">
+                      {client.tag}
+                    </span>
+                  </div>
+
+                  <span
+                    className={`text-[10px] uppercase tracking-[0.16em] ${
+                      active ? "text-primary" : "text-muted-foreground"
+                    }`}
+                  >
+                    {active ? t("clients.activeLabel") : t("clients.viewStory")}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* storytelling */}
+          <div className="rounded-2xl border border-border bg-card/60 shadow-sm p-6 sm:p-8 lg:p-9">
+            <p className="uppercase tracking-[0.18em] text-[11px] text-primary/80 mb-2">
+              {t("clients.storyLabel")}
+            </p>
+
+            <h3 className="text-2xl sm:text-3xl font-light text-foreground mb-4">
+              {story?.title}
+            </h3>
+
+            <div className="space-y-4 text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
+              <p>{story?.context}</p>
+              <p>{story?.howWeHelp}</p>
+            </div>
+
+            <div className="mt-6 rounded-xl bg-muted/40 border border-border/70 px-4 py-4">
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                {story?.highlight}
+              </p>
+            </div>
           </div>
         </div>
 
         <div className="mt-12 text-center">
           <p className="text-muted-foreground font-light text-xs italic">
-            {t("networks.more")}
+            {t("clients.more")}
           </p>
         </div>
       </div>
