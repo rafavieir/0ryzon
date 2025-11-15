@@ -140,9 +140,9 @@ const translations = {
           context:
             "A Opus precisava de tecnologia que funcionasse sem virar mais um problema no meio da reforma. Orçamentos, documentos, fotos de obra e comunicação com clientes estavam espalhados em vários apps e dispositivos.",
           howWeHelp:
-            "Organizamos o ecossistema digital da Opus, estruturando acessos, armazenamento em nuvem e automações leves para orçamentos e registros de obra. Hoje, a equipe acompanha tudo com clareza — sem arquivos perdidos ou logins quebrados.",
+            "Organizamos o ecossistema digital da Opus, estruturando acessos, armazenamento em nuvem e automações leves para orçamentos e registros de obra. Hoje, a equipe acompanha tudo com facilidade, sem arquivos perdidos ou logins quebrados.",
           highlight:
-            "A 0ryzon mantém a tecnologia invisível: a Opus foca em entregar obras impecáveis, e nós garantimos que o digital não trave o dia."
+            "A Opus foca em entregar obras impecáveis, e nós garantimos que o digital não trave o dia."
         },
         {
           title: "Mordelicia com uma operação de delivery mais fluida",
@@ -151,7 +151,7 @@ const translations = {
           howWeHelp:
             "Conectamos ferramentas, organizamos acessos e criamos automações para pedidos, relatórios e comunicação interna. O resultado foi menos caos, menos retrabalho e muito mais previsibilidade.",
           highlight:
-            "Com a 0ryzon por trás, a Mordelicia opera com fluxo: a cozinha foca no sabor, o atendimento foca no cliente — e a tecnologia simplesmente funciona."
+            ""
         }
       ]
     },
