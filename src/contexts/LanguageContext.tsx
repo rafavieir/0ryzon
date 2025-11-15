@@ -49,7 +49,7 @@ const translations = {
   pt: {
     hero: {
       title: "Soluções em Tecnologia",
-      titleAlt: "para simplificam seu cotidiano",
+      titleAlt: "que Simplificam seu Dia a Dia",
       subtitle:
         "Suporte, infraestrutura e automação em T.I. para quem precisa de tecnologia funcionando, sem complicação."
     },
@@ -125,6 +125,36 @@ const translations = {
         }
       ]
     },
+    clients: {
+      title: "Nossos Clientes",
+      subtitle:
+        "Criamos soluções de T.I. que trabalham nos bastidores e deixam a operação deles fluir sem atrito.",
+      storyLabel: "História de impacto",
+      activeLabel: "Ativo",
+      viewStory: "Ver história",
+      more:
+        "E outras empresas que contam com a 0ryzon para eliminar fricção da tecnologia no dia a dia.",
+      items: [
+        {
+          title: "Opus Construtora com tecnologia que não atrapalha a obra",
+          context:
+            "A Opus precisava de tecnologia que funcionasse sem virar mais um problema no meio da reforma. Orçamentos, documentos, fotos de obra e comunicação com clientes estavam espalhados em vários apps e dispositivos.",
+          howWeHelp:
+            "Organizamos o ecossistema digital da Opus, estruturando acessos, armazenamento em nuvem e automações leves para orçamentos e registros de obra. Hoje, a equipe acompanha tudo com clareza — sem arquivos perdidos ou logins quebrados.",
+          highlight:
+            "A 0ryzon mantém a tecnologia invisível: a Opus foca em entregar obras impecáveis, e nós garantimos que o digital não trave o dia."
+        },
+        {
+          title: "Mordelicia com uma operação de delivery mais fluida",
+          context:
+            "A Mordelicia recebia pedidos de vários canais, com equipe no corre o dia inteiro e sistemas que não se integravam bem. Quem sofria era o cliente final.",
+          howWeHelp:
+            "Conectamos ferramentas, organizamos acessos e criamos automações para pedidos, relatórios e comunicação interna. O resultado foi menos caos, menos retrabalho e muito mais previsibilidade.",
+          highlight:
+            "Com a 0ryzon por trás, a Mordelicia opera com fluxo: a cozinha foca no sabor, o atendimento foca no cliente — e a tecnologia simplesmente funciona."
+        }
+      ]
+    },
     footer: {
       brand: "Soluções em tecnologia para simplificar o dia a dia digital",
       contact: "Contato",
@@ -134,6 +164,10 @@ const translations = {
       social: "Redes"
     }
   },
+
+  // ---------------------------------------------
+  // --------------- ESPAÑOL ----------------------
+  // ---------------------------------------------
   es: {
     hero: {
       title: "Soluciones en Tecnología",
@@ -213,6 +247,36 @@ const translations = {
         }
       ]
     },
+    clients: {
+      title: "Nuestros Clientes",
+      subtitle:
+        "Construimos soluciones de T.I. que se quedan en segundo plano y dejan la operación fluir sin fricción.",
+      storyLabel: "Historia de impacto",
+      activeLabel: "Activo",
+      viewStory: "Ver historia",
+      more:
+        "Y otras empresas que eligen a 0ryzon para quitar la fricción de la tecnología en su día a día.",
+      items: [
+        {
+          title: "Opus Construtora con tecnología que no estorba la obra",
+          context:
+            "Opus necesitaba tecnología que funcionara sin convertirse en un problema más en medio de la reforma. Presupuestos, documentos, fotos de obra y comunicación con clientes estaban dispersos en varias apps y dispositivos.",
+          howWeHelp:
+            "Organizamos el entorno de T.I. de Opus, estructurando cuentas, accesos, almacenamiento en la nube y automatizaciones sencillas. El equipo ahora trabaja con claridad y sin pérdidas de información.",
+          highlight:
+            "El papel de 0ryzon es mantener la tecnología en backstage: Opus se enfoca en construir, nosotros en que nada digital se rompa."
+        },
+        {
+          title: "Mordelicia con una operación de delivery más fluida",
+          context:
+            "Mordelicia recibía pedidos desde varios canales y usaba sistemas que no se integraban bien. El caos afectaba la experiencia del cliente.",
+          howWeHelp:
+            "Conectamos herramientas, organizamos accesos y creamos automatizaciones para pedidos, reportes y comunicación interna. Flujo limpio, menos errores, más velocidad.",
+          highlight:
+            "Con 0ryzon, la cocina se enfoca en el sabor, el equipo en las personas — y la tecnología simplemente funciona."
+        }
+      ]
+    },
     footer: {
       brand: "Soluciones tecnológicas para simplificar el día a día digital",
       contact: "Contacto",
@@ -222,6 +286,10 @@ const translations = {
       social: "Redes"
     }
   },
+
+  // ---------------------------------------------
+  // ---------------- ENGLISH ---------------------
+  // ---------------------------------------------
   en: {
     hero: {
       title: "Technology Solutions",
@@ -245,10 +313,10 @@ const translations = {
         "To make life easier for people and organizations through support, infrastructure and automation, with a strong focus on the end-user experience."
     },
     networks: {
-      title: "Solutions & Areas of Expertise",
+      title: "Solutions & Expertise",
       subtitle:
-        "We work with support, infrastructure, cloud, networking, automation and observability for end users and companies.",
-      more: "+ Various other tailor-made information technology solutions"
+        "We operate in support, infrastructure, cloud, networking, automation and observability for individuals and companies.",
+      more: "+ Several other tailor-made IT solutions"
     },
     differentials: {
       title: "Differentials",
@@ -261,17 +329,17 @@ const translations = {
         {
           title: "Proactive Monitoring",
           description:
-            "We monitor services and infrastructure in real time to act before problems impact users."
+            "We monitor services and infrastructure in real time to act before problems arise."
         },
         {
           title: "IT Expertise",
           description:
-            "Solid experience in support, networking, cloud, security and systems integration."
+            "Strong experience in support, networking, cloud, security and system integration."
         },
         {
           title: "Stability & Reliability",
           description:
-            "Architectures built for availability, security and predictable operation."
+            "Architectures designed for availability, security and predictable operation."
         },
         {
           title: "Education & Documentation",
@@ -282,7 +350,8 @@ const translations = {
     },
     services: {
       title: "Services",
-      subtitle: "End-to-end IT solutions to simplify the digital day-to-day",
+      subtitle:
+        "End-to-end IT solutions to simplify the digital day-to-day",
       items: [
         {
           title: "Support & Help Desk",
@@ -292,23 +361,4 @@ const translations = {
         {
           title: "Infrastructure & Cloud",
           description:
-            "Management of servers, networks, access, backups and cloud services with a focus on stability and security."
-        },
-        {
-          title: "Automation & Integrations",
-          description:
-            "Automation of workflows and integration between tools to reduce manual work and errors."
-        }
-      ]
-    },
-    footer: {
-      brand: "Technology solutions to simplify the digital day-to-day",
-      contact: "Contact",
-      monitoring: "Monitoring",
-      statusPage: "Service Status",
-      grafanaDashboard: "Observability Dashboard",
-      social: "Social"
-    }
-  }
-};
-
+            "Management of servers, networks, access, backups and cloud ser
