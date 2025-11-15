@@ -361,4 +361,52 @@ const translations = {
         {
           title: "Infrastructure & Cloud",
           description:
-            "Management of servers, networks, access, backups and cloud ser
+            "Management of servers, networks, access, backups and cloud services with a focus on stability and security."
+        },
+        {
+          title: "Automation & Integrations",
+          description:
+            "Workflow automation and integration between tools to reduce manual work and errors."
+        }
+      ]
+    },
+    clients: {
+      title: "Our Clients",
+      subtitle:
+        "We build IT solutions that stay in the background and let operations flow without friction.",
+      storyLabel: "Impact Story",
+      activeLabel: "Active",
+      viewStory: "View Story",
+      more:
+        "And other companies that trust 0ryzon to eliminate technology friction from daily operations.",
+      items: [
+        {
+          title: "Opus Construtora with tech that doesn’t get in the way",
+          context:
+            "Opus needed technology that worked without becoming another problem in the middle of a construction project. Quotes, documents, site photos and communication were scattered across apps and devices.",
+          howWeHelp:
+            "We organized their digital environment: access control, cloud structure and workflow automations for quotes and site logs. Now the team works with clarity and zero information loss.",
+          highlight:
+            "0ryzon keeps tech backstage: Opus builds, we make sure nothing digital breaks."
+        },
+        {
+          title: "Mordelicia with a smoother delivery operation",
+          context:
+            "Mordelicia received orders from multiple channels and dealt with systems that didn’t integrate well. Chaos affected the end-customer experience.",
+          howWeHelp:
+            "We connected tools, organized access and created automations for orders, reporting and internal communication. Less chaos, fewer mistakes, more consistency.",
+          highlight:
+            "With 0ryzon, the kitchen focuses on flavor, the team focuses on people — and tech simply works."
+        }
+      ]
+    },
+    footer: {
+      brand: "Technology solutions to simplify the digital day-to-day",
+      contact: "Contact",
+      monitoring: "Monitoring",
+      statusPage: "Service Status",
+      grafanaDashboard: "Observability Dashboard",
+      social: "Social"
+    }
+  }
+};
