@@ -45,234 +45,270 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     </LanguageContext.Provider>
   );
 };
-
 const translations = {
   pt: {
     hero: {
-      title: "Soluções para Web3",
-      titleAlt: "Descentralizadas",
-      subtitle: "Alta disponibilidade, observabilidade e redundância para redes blockchain e projetos descentralizados."
+      title: "Soluções em Tecnologia",
+      titleAlt: "que Simplificam seu Dia a Dia",
+      subtitle:
+        "Suporte, infraestrutura e automação em T.I. para quem precisa de tecnologia funcionando, sem complicação."
     },
     networkStatus: {
       title: "Status em Tempo Real",
-      subtitle: "Monitoramento 24/7 de nossa infraestrutura",
-      networks: "Redes Ativas",
-      uptime: "Uptime Médio",
-      nodes: "Nodes Operando"
+      subtitle: "Monitoramento 24/7 dos serviços e infraestrutura que operamos",
+      networks: "Serviços Ativos",
+      uptime: "Disponibilidade Média",
+      nodes: "Chamados em Andamento"
     },
     vision: {
       visionTitle: "Visão",
-      visionText: "Ser um operador líder de infraestrutura descentralizada, conectando provedores distribuídos, empresas e comunidades a um novo modelo de internet — aberta, resiliente e colaborativa.",
+      visionText:
+        "Ser referência em soluções de T.I. que tornam a tecnologia invisível para o usuário final — estável, simples e sempre disponível.",
       missionTitle: "Missão",
-      missionText: "Trazer profissionalismo, segurança e transparência à operação de nodes e validadores, contribuindo para o crescimento sustentável do ecossistema Web3 global."
+      missionText:
+        "Facilitar a vida de pessoas e empresas através de suporte, infraestrutura e automação em tecnologia, com foco na experiência do usuário final."
     },
     networks: {
-      title: "Redes & Ecossistemas",
-      subtitle: "Atuamos e colaboramos com projetos líderes em DePIN e Web3",
-      more: "+ Diversas outras redes PoS e DePIN em expansão"
+      title: "Soluções & Áreas de Atuação",
+      subtitle:
+        "Atuamos em suporte, infraestrutura, nuvem, redes, automação e observabilidade para usuários finais e empresas.",
+      more: "+ Outras soluções sob medida em tecnologia da informação"
     },
     differentials: {
       title: "Diferenciais",
       items: [
         {
-          title: "Infraestrutura 100% Monitorada",
-          description: "Painéis públicos de uptime e logs auditáveis em tempo real."
+          title: "Foco no Usuário Final",
+          description:
+            "Tudo é pensado para reduzir fricção, tirar dúvidas rápido e manter a tecnologia fora do caminho."
         },
         {
-          title: "Operação Multi-Rede",
-          description: "Experiência comprovada em performance e segurança em múltiplas blockchains."
+          title: "Monitoramento Proativo",
+          description:
+            "Acompanhamos serviços e infraestrutura em tempo real para agir antes do problema aparecer."
         },
         {
-          title: "Expertise Técnico Real",
-          description: "Conhecimento profundo em cloud, containers, networking e arquitetura corporativa."
+          title: "Expertise em T.I.",
+          description:
+            "Experiência sólida em suporte, redes, nuvem, segurança e integração de sistemas."
         },
         {
-          title: "Redundância & Resiliência",
-          description: "Arquitetura distribuída com múltiplos pontos de presença garantindo alta disponibilidade."
+          title: "Estabilidade & Confiabilidade",
+          description:
+            "Arquiteturas pensadas para disponibilidade, segurança e previsibilidade na operação."
         },
         {
-          title: "Educação & Expansão",
-          description: "Compromisso com o crescimento e educação do ecossistema Web3 global."
+          title: "Educação & Documentação",
+          description:
+            "Guias, boas práticas e orientação contínua para que usuários se sintam seguros com a tecnologia."
         }
       ]
     },
     services: {
       title: "Serviços",
-      subtitle: "Soluções profissionais para o ecossistema Web3",
+      subtitle: "Soluções completas em T.I. para facilitar o dia a dia digital",
       items: [
         {
-          title: "Alta Disponibilidade",
-          description: "Infraestrutura resiliente com redundância e uptime garantido para suas operações"
+          title: "Suporte & Help Desk",
+          description:
+            "Atendimento ágil para incidentes, dúvidas e problemas do dia a dia com computadores, sistemas e acessos."
         },
         {
-          title: "Observabilidade",
-          description: "Monitoramento 24/7 com métricas, logs e alertas em tempo real"
+          title: "Infraestrutura & Nuvem",
+          description:
+            "Gestão de servidores, redes, acessos, backup e serviços em nuvem com foco em estabilidade e segurança."
         },
         {
-          title: "Soluções Web3",
-          description: "Arquitetura e implementação de projetos descentralizados"
+          title: "Automação & Integrações",
+          description:
+            "Automatização de rotinas e integração entre ferramentas para reduzir trabalho manual e erros."
         }
       ]
     },
     footer: {
-      brand: "Infraestrutura descentralizada enterprise de alta disponibilidade",
+      brand: "Soluções em tecnologia para simplificar o dia a dia digital",
       contact: "Contato",
       monitoring: "Monitoramento",
-      statusPage: "Status Page",
-      grafanaDashboard: "Grafana Dashboard",
+      statusPage: "Status dos Serviços",
+      grafanaDashboard: "Painel de Observabilidade",
       social: "Redes"
     }
   },
   es: {
     hero: {
-      title: "Soluciones para Web3",
-      titleAlt: "Descentralizadas",
-      subtitle: "Alta disponibilidad, observabilidad y redundancia para redes blockchain y proyectos descentralizados."
+      title: "Soluciones en Tecnología",
+      titleAlt: "que Simplifican tu Día a Día",
+      subtitle:
+        "Soporte, infraestructura y automatización en T.I. para quienes necesitan tecnología funcionando sin complicaciones."
     },
     networkStatus: {
       title: "Estado en Tiempo Real",
-      subtitle: "Monitoreo 24/7 de nuestra infraestructura",
-      networks: "Redes Activas",
-      uptime: "Uptime Promedio",
-      nodes: "Nodos Operando"
+      subtitle: "Monitoreo 24/7 de los servicios e infraestructura que operamos",
+      networks: "Servicios Activos",
+      uptime: "Disponibilidad Promedio",
+      nodes: "Tickets en Curso"
     },
     vision: {
       visionTitle: "Visión",
-      visionText: "Ser un operador líder de infraestructura descentralizada, conectando proveedores distribuidos, empresas y comunidades a un nuevo modelo de internet — abierta, resiliente y colaborativa.",
+      visionText:
+        "Ser referencia en soluciones de T.I. que hacen que la tecnología sea invisible para el usuario final: estable, simple y siempre disponible.",
       missionTitle: "Misión",
-      missionText: "Aportar profesionalismo, seguridad y transparencia a la operación de nodos y validadores, contribuyendo al crecimiento sostenible del ecosistema Web3 global."
+      missionText:
+        "Facilitar la vida de personas y empresas mediante soporte, infraestructura y automatización tecnológica, con foco en la experiencia del usuario final."
     },
     networks: {
-      title: "Redes & Ecosistemas",
-      subtitle: "Actuamos y colaboramos con proyectos líderes en DePIN y Web3",
-      more: "+ Diversas otras redes PoS y DePIN en expansión"
+      title: "Soluciones & Áreas de Actuación",
+      subtitle:
+        "Actuamos en soporte, infraestructura, nube, redes, automatización y observabilidad para usuarios finales y empresas.",
+      more: "+ Otras soluciones a medida en tecnología de la información"
     },
     differentials: {
       title: "Diferenciales",
       items: [
         {
-          title: "Infraestructura 100% Monitoreada",
-          description: "Paneles públicos de uptime y registros auditables en tiempo real."
+          title: "Enfoque en el Usuario Final",
+          description:
+            "Todo está pensado para reducir fricción, resolver dudas rápido y mantener la tecnología fuera del camino."
         },
         {
-          title: "Operación Multi-Red",
-          description: "Experiencia comprobada en rendimiento y seguridad en múltiples blockchains."
+          title: "Monitoreo Proactivo",
+          description:
+            "Acompañamos servicios e infraestructura en tiempo real para actuar antes de que aparezca el problema."
         },
         {
-          title: "Experiencia Técnica Real",
-          description: "Conocimiento profundo en cloud, contenedores, redes y arquitectura corporativa."
+          title: "Experiencia en T.I.",
+          description:
+            "Sólida experiencia en soporte, redes, nube, seguridad e integración de sistemas."
         },
         {
-          title: "Redundancia & Resiliencia",
-          description: "Arquitectura distribuida con múltiples puntos de presencia garantizando alta disponibilidad."
+          title: "Estabilidad & Confiabilidad",
+          description:
+            "Arquitecturas diseñadas para disponibilidad, seguridad y previsibilidad en la operación."
         },
         {
-          title: "Educación & Expansión",
-          description: "Compromiso con el crecimiento y educación del ecosistema Web3 global."
+          title: "Educación & Documentación",
+          description:
+            "Guías, buenas prácticas y orientación continua para que los usuarios se sientan seguros con la tecnología."
         }
       ]
     },
     services: {
       title: "Servicios",
-      subtitle: "Soluciones profesionales para el ecosistema Web3",
+      subtitle: "Soluciones completas en T.I. para facilitar el día a día digital",
       items: [
         {
-          title: "Alta Disponibilidad",
-          description: "Infraestructura resiliente con redundancia y uptime garantizado para sus operaciones"
+          title: "Soporte & Help Desk",
+          description:
+            "Atención ágil para incidentes, dudas y problemas diarios con computadoras, sistemas y accesos."
         },
         {
-          title: "Observabilidad",
-          description: "Monitoreo 24/7 con métricas, logs y alertas en tiempo real"
+          title: "Infraestructura & Nube",
+          description:
+            "Gestión de servidores, redes, accesos, copias de seguridad y servicios en la nube con foco en estabilidad y seguridad."
         },
         {
-          title: "Soluciones Web3",
-          description: "Arquitectura e implementación de proyectos descentralizados"
+          title: "Automatización & Integraciones",
+          description:
+            "Automatización de rutinas e integración entre herramientas para reducir trabajo manual y errores."
         }
       ]
     },
     footer: {
-      brand: "Infraestructura descentralizada enterprise de alta disponibilidad",
+      brand: "Soluciones tecnológicas para simplificar el día a día digital",
       contact: "Contacto",
       monitoring: "Monitoreo",
-      statusPage: "Página de Estado",
-      grafanaDashboard: "Panel Grafana",
+      statusPage: "Estado de los Servicios",
+      grafanaDashboard: "Panel de Observabilidad",
       social: "Redes"
     }
   },
   en: {
     hero: {
-      title: "Solutions for Web3",
-      titleAlt: "Decentralized",
-      subtitle: "High availability, observability and redundancy for blockchain networks and decentralized projects."
+      title: "Technology Solutions",
+      titleAlt: "that Simplify Your Day-to-Day",
+      subtitle:
+        "Support, infrastructure and automation for people and businesses that need technology working without hassle."
     },
     networkStatus: {
       title: "Real-Time Status",
-      subtitle: "24/7 monitoring of our infrastructure",
-      networks: "Active Networks",
-      uptime: "Average Uptime",
-      nodes: "Operating Nodes"
+      subtitle: "24/7 monitoring of the services and infrastructure we operate",
+      networks: "Active Services",
+      uptime: "Average Availability",
+      nodes: "Open Tickets"
     },
     vision: {
       visionTitle: "Vision",
-      visionText: "To be a leading decentralized infrastructure operator, connecting distributed providers, enterprises and communities to a new internet model — open, resilient and collaborative.",
+      visionText:
+        "To be a reference in IT solutions that make technology invisible to the end user — stable, simple and always available.",
       missionTitle: "Mission",
-      missionText: "Bring professionalism, security and transparency to node and validator operations, contributing to the sustainable growth of the global Web3 ecosystem."
+      missionText:
+        "To make life easier for people and organizations through support, infrastructure and automation, with a strong focus on the end-user experience."
     },
     networks: {
-      title: "Networks & Ecosystems",
-      subtitle: "We operate and collaborate with leading DePIN and Web3 projects",
-      more: "+ Various other expanding PoS and DePIN networks"
+      title: "Solutions & Areas of Expertise",
+      subtitle:
+        "We work with support, infrastructure, cloud, networking, automation and observability for end users and companies.",
+      more: "+ Various other tailor-made information technology solutions"
     },
     differentials: {
       title: "Differentials",
       items: [
         {
-          title: "100% Monitored Infrastructure",
-          description: "Public uptime dashboards and auditable logs in real-time."
+          title: "End-User Focus",
+          description:
+            "Everything is designed to reduce friction, solve issues quickly and keep technology out of the way."
         },
         {
-          title: "Multi-Network Operation",
-          description: "Proven experience in performance and security across multiple blockchains."
+          title: "Proactive Monitoring",
+          description:
+            "We monitor services and infrastructure in real time to act before problems impact users."
         },
         {
-          title: "Real Technical Expertise",
-          description: "Deep knowledge in cloud, containers, networking and corporate architecture."
+          title: "IT Expertise",
+          description:
+            "Solid experience in support, networking, cloud, security and systems integration."
         },
         {
-          title: "Redundancy & Resilience",
-          description: "Distributed architecture with multiple points of presence ensuring high availability."
+          title: "Stability & Reliability",
+          description:
+            "Architectures built for availability, security and predictable operation."
         },
         {
-          title: "Education & Expansion",
-          description: "Commitment to growth and education of the global Web3 ecosystem."
+          title: "Education & Documentation",
+          description:
+            "Guides, best practices and continuous guidance so users feel safe with technology."
         }
       ]
     },
     services: {
       title: "Services",
-      subtitle: "Professional solutions for the Web3 ecosystem",
+      subtitle: "End-to-end IT solutions to simplify the digital day-to-day",
       items: [
         {
-          title: "High Availability",
-          description: "Resilient infrastructure with redundancy and guaranteed uptime for your operations"
+          title: "Support & Help Desk",
+          description:
+            "Fast response for incidents, questions and everyday issues with devices, systems and access."
         },
         {
-          title: "Observability",
-          description: "24/7 monitoring with real-time metrics, logs and alerts"
+          title: "Infrastructure & Cloud",
+          description:
+            "Management of servers, networks, access, backups and cloud services with a focus on stability and security."
         },
         {
-          title: "Web3 Solutions",
-          description: "Architecture and implementation of decentralized projects"
+          title: "Automation & Integrations",
+          description:
+            "Automation of workflows and integration between tools to reduce manual work and errors."
         }
       ]
     },
     footer: {
-      brand: "High availability enterprise decentralized infrastructure",
+      brand: "Technology solutions to simplify the digital day-to-day",
       contact: "Contact",
       monitoring: "Monitoring",
-      statusPage: "Status Page",
-      grafanaDashboard: "Grafana Dashboard",
+      statusPage: "Service Status",
+      grafanaDashboard: "Observability Dashboard",
       social: "Social"
     }
   }
 };
+
