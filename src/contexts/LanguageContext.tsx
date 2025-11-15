@@ -49,7 +49,7 @@ const translations = {
   pt: {
     hero: {
       title: "Soluções em Tecnologia",
-      titleAlt: "que Simplificam seu Dia a Dia",
+      titleAlt: "para simplificam seu cotidiano",
       subtitle:
         "Suporte, infraestrutura e automação em T.I. para quem precisa de tecnologia funcionando, sem complicação."
     },
