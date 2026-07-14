@@ -48,14 +48,14 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 const translations = {
   pt: {
     header: {
-      cta: "Fale com a 0ryzon"
+      cta: "Fale com a ³Øryzon"
     },
     hero: {
       kicker: "Tecnologia aplicada a processos",
       title: "Tecnologia para processos mais eficientes.",
       subtitle:
         "Desenvolvemos soluções que conectam dados, sistemas e inteligência para simplificar operações e melhorar resultados.",
-      ctaPrimary: "Fale com a 0ryzon",
+      ctaPrimary: "Fale com a ³Øryzon",
       capabilities: ["Dados", "Automação", "Sistemas", "Inteligência aplicada"]
     },
     footer: {
@@ -69,14 +69,14 @@ const translations = {
   // ---------------------------------------------
   es: {
     header: {
-      cta: "Habla con 0ryzon"
+      cta: "Habla con ³Øryzon"
     },
     hero: {
       kicker: "Tecnología aplicada a procesos",
       title: "Tecnología para procesos más eficientes.",
       subtitle:
         "Desarrollamos soluciones que conectan datos, sistemas e inteligencia para simplificar operaciones y mejorar resultados.",
-      ctaPrimary: "Habla con 0ryzon",
+      ctaPrimary: "Habla con ³Øryzon",
       capabilities: ["Datos", "Automatización", "Sistemas", "Inteligencia aplicada"]
     },
     footer: {
@@ -90,14 +90,14 @@ const translations = {
   // ---------------------------------------------
   en: {
     header: {
-      cta: "Talk to 0ryzon"
+      cta: "Talk to ³Øryzon"
     },
     hero: {
       kicker: "Technology applied to processes",
       title: "Technology for more efficient processes.",
       subtitle:
         "We build solutions that connect data, systems and intelligence to simplify operations and improve results.",
-      ctaPrimary: "Talk to 0ryzon",
+      ctaPrimary: "Talk to ³Øryzon",
       capabilities: ["Data", "Automation", "Systems", "Applied intelligence"]
     },
     footer: {
